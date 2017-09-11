@@ -1,0 +1,29 @@
+{
+  "name": "untitled",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "/usr/local/bin/node /Users/robnightingale/Documents/workspace/repos/reposit/untitled/bin/www",
+    "test": "mocha --timeout 1000"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "hbs": "~4.0.1",
+    "mongoose": "^4.11.9",
+    "morgan": "~1.8.1",
+    "node-sass-middleware": "0.9.8",
+    "serve-favicon": "~2.4.2",
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "chai-http": "^3.0.0",
+    "express-print-routes": "^1.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.5.0",
+    "should": "^12.0.0"
+  }
+}

@@ -1,0 +1,76 @@
+router                                                                                                         
+ ├── query                                         *                                                           
+ ├── expressInit                                   *                                                           
+ ├── logger                                        *                                                           
+ ├── jsonParser                                    *                                                           
+ ├── urlencodedParser                              *                                                           
+ ├── textParser                                    *                                                           
+ ├── jsonParser                                    *                                                           
+ ├── cookieParser                                  *                                                           
+ ├── sass                                          *                                                           
+ ├── serveStatic                                   *                                                           
+ ├── router                                        *                                                           
+ │   router                                                                                                    
+ │    ├── bound dispatch                           /                                                           GET
+ │    │    └── __getIndex                          /                                                           GET
+ │    │   
+ │    ├── router                                   /^\/users\/?(?=\/|$)/                                       
+ │    │   router                                                                                               
+ │    │    └── bound dispatch                      /                                                           GET
+ │    │         └── getUsers                       /                                                           GET
+ │    │        
+ │    │   
+ │    ├── router                                   /^\/flights\/?(?=\/|$)/                                     
+ │    │   router                                                                                               
+ │    │    └── bound dispatch                      /:from-:to                                                  GET
+ │    │         └── getFlightsFromTo               /                                                           GET
+ │    │        
+ │    │   
+ │    ├── router                                   /^\/models\/?(?=\/|$)/                                      
+ │    │   router                                                                                               
+ │    │    ├── bound dispatch                      /                                                           GET
+ │    │    │    └── getModels                      /                                                           GET
+ │    │    │   
+ │    │    ├── bound dispatch                      /:modelId                                                   GET
+ │    │    │    └── getModel                       /                                                           GET
+ │    │    │   
+ │    │    └── router                              /^\/(?:([^\/]+?))\/cars\/?(?=\/|$)/                         
+ │    │        router                                                                                          
+ │    │         └── bound dispatch                 /                                                           GET
+ │    │              └── <anonymous>               /                                                           GET
+ │    │             
+ │    │        
+ │    │   
+ │    ├── router                                   /^\/cars\/?(?=\/|$)/                                        
+ │    │   router                                                                                               
+ │    │    ├── bound dispatch                      /                                                           GET
+ │    │    │    └── getCars                        /                                                           GET
+ │    │    │   
+ │    │    └── bound dispatch                      /:carId                                                     GET
+ │    │         └── getCar                         /                                                           GET
+ │    │        
+ │    │   
+ │    └── router                                   /^\/bookstore\/?(?=\/|$)/                                   
+ │        router                                                                                               
+ │         ├── bound dispatch                      /                                                           GET
+ │         │    └── <anonymous>                    /                                                           GET
+ │         │   
+ │         ├── bound dispatch                      /books                                                      GET
+ │         │    └── getBooks                       /                                                           GET
+ │         │   
+ │         ├── bound dispatch                      /book                                                       POST
+ │         │    └── postBook                       /                                                           POST
+ │         │   
+ │         ├── bound dispatch                      /book/:id                                                   GET
+ │         │    └── getBook                        /                                                           GET
+ │         │   
+ │         ├── bound dispatch                      /book/:id                                                   DELETE
+ │         │    └── deleteBook                     /                                                           DELETE
+ │         │   
+ │         └── bound dispatch                      /book/:id                                                   PUT
+ │              └── updateBook                     /                                                           PUT
+ │             
+ │        
+ │   
+ ├── <anonymous>                                   *                                                           
+ └── <anonymous>                                   *                                                           
